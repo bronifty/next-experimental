@@ -1,5 +1,4 @@
 import React from "react";
-import RCC from "./RCC";
 
 const getProduct1 = fetch("https://dummyjson.com/products/1").then((res) =>
   res.json()
@@ -18,7 +17,12 @@ const RSC = () => {
   const product = React.use(getProduct1);
   if (!product) return <div>Loading...</div>;
 
-  return <div>In the RSC created in RSC file: {product.title}</div>;
+  return (
+    <div>
+      <h2>In the RSC passed as children to the RCC via page.tsx in next: </h2>
+      <div>product.title from use hook query: {product.title}</div>
+    </div>
+  );
 };
 
 export default RSC;
