@@ -2,6 +2,8 @@
 import React from "react";
 
 const RCC = ({ children }) => {
+  console.log("RCC");
+
   return (
     <>
       <React.Suspense fallback={<div>Loading...</div>}>
